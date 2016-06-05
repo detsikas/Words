@@ -6,7 +6,7 @@ The library supports Greek letters, stemmer and stop word sets. Currently, Greek
 make it optional. Until then, it is fairly easy to do it, once someone understands the code.
 
 ## Dependecies
-The project uses https://github.com/detsikas/StopWordsLib
+The project uses [StopWordsLib] (https://github.com/detsikas/StopWordsLib). Before using **Words**, make sure to download that first.
 
 ## Usage
 
