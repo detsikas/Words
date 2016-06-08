@@ -9,4 +9,27 @@ make it optional. Until then, it is fairly easy to do it, once someone understan
 The project uses [StopWordsLib] (https://github.com/detsikas/StopWordsLib). Before using **Words**, make sure to download that first.
 
 ## Usage
+Here is some sample code on how to use the library
+
+```C++
+//Initialize Words class
+string greekPath = "path_to_greek_stop_words_file";
+string englishPath = path_to_english_stop_words_file";
+Words words(greekPath, englishPath);
+    
+string englishWord = "Ourselves";
+
+// convert test word to lower case and remove accent (for Greek words only)
+// also detect the language
+Languge_t language;
+string loweredNonAccentEnglishWord = words.lowerNonAccent(engishWord, language);
+
+// stem the word    
+string stemmedEnglishWord = words.stemGreekWord(loweredNonAccentEnglishWord);
+    
+if (!words.findEnglishStopWord(stemmedEnglishWord, words))
+  cout<<stemmedEnglishWord;
+  
+string englishPhrase = " This is a sample phrase";
+string processedPhrase = words.processPhrase(englishPhrase);
 
